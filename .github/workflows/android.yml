@@ -1,9 +1,6 @@
 name: Android Client CI
 on:
-  push:
-  pull_request:
-    branches:
-      - master
+ workflow_dispatch
 
 jobs:
   build:
