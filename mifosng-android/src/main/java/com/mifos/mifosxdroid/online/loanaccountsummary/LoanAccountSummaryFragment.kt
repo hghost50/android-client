@@ -234,7 +234,7 @@ class LoanAccountSummaryFragment : ProgressableFragment(), LoanAccountSummaryMvp
 
     fun inflateLoanSummary(loanWithAssociations: LoanWithAssociations) {
         tv_amount_disbursed!!.text = loanWithAssociations.summary
-                .principalDisbursed.toString()
+                .principalDisbursed.toString() + "GNF "
         try {
             tv_disbursement_date!!.text = DateHelper.getDateAsString(loanWithAssociations
                     .timeline.actualDisbursementDate)
@@ -243,31 +243,31 @@ class LoanAccountSummaryFragment : ProgressableFragment(), LoanAccountSummaryMvp
         }
         tv_in_arrears!!.text = loanWithAssociations.summary.totalOverdue.toString()
         tv_principal!!.text = loanWithAssociations.summary
-                .principalDisbursed.toString()
+                .principalDisbursed.toString()+ "GNF "
         tv_loan_principal_due!!.text = loanWithAssociations.summary
-                .principalOutstanding.toString()
+                .principalOutstanding.toString()+ "GNF "
         tv_loan_principal_paid!!.text = loanWithAssociations.summary
-                .principalPaid.toString()
+                .principalPaid.toString()+ "GNF "
         tv_interest!!.text = loanWithAssociations.summary.interestCharged.toString()
         tv_loan_interest_due!!.text = loanWithAssociations.summary
-                .interestOutstanding.toString()
+                .interestOutstanding.toString()+ "GNF "
         tv_loan_interest_paid!!.text = loanWithAssociations.summary
-                .interestPaid.toString()
+                .interestPaid.toString()+ "GNF "
         tv_fees!!.text = loanWithAssociations.summary.feeChargesCharged.toString()
         tv_loan_fees_due!!.text = loanWithAssociations.summary
-                .feeChargesOutstanding.toString()
+                .feeChargesOutstanding.toString()+ "GNF "
         tv_loan_fees_paid!!.text = loanWithAssociations.summary
-                .feeChargesPaid.toString()
+                .feeChargesPaid.toString()+ "GNF "
         tv_penalty!!.text = loanWithAssociations.summary
-                .penaltyChargesCharged.toString()
+                .penaltyChargesCharged.toString()+ "GNF "
         tv_loan_penalty_due!!.text = loanWithAssociations.summary
-                .penaltyChargesOutstanding.toString()
+                .penaltyChargesOutstanding.toString()+ "GNF "
         tv_loan_penalty_paid!!.text = loanWithAssociations.summary
-                .penaltyChargesPaid.toString()
+                .penaltyChargesPaid.toString()+ "GNF "
         tv_total!!.text = loanWithAssociations.summary
-                .totalExpectedRepayment.toString()
-        tv_total_due!!.text = loanWithAssociations.summary.totalOutstanding.toString()
-        tv_total_paid!!.text = loanWithAssociations.summary.totalRepayment.toString()
+                .totalExpectedRepayment.toString()+ "GNF "
+        tv_total_due!!.text = loanWithAssociations.summary.totalOutstanding.toString()+ "GNF "
+        tv_total_paid!!.text = loanWithAssociations.summary.totalRepayment.toString()+ "GNF "
     }
 
     fun loadDocuments() {
