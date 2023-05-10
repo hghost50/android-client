@@ -234,7 +234,7 @@ class LoanAccountSummaryFragment : ProgressableFragment(), LoanAccountSummaryMvp
 
     fun inflateLoanSummary(loanWithAssociations: LoanWithAssociations) {
         tv_amount_disbursed!!.text = loanWithAssociations.summary
-                .principalDisbursed.toString() + "GNF "
+                .principalDisbursed.format("%,d") + " GNF"
         try {
             tv_disbursement_date!!.text = DateHelper.getDateAsString(loanWithAssociations
                     .timeline.actualDisbursementDate)
@@ -243,9 +243,9 @@ class LoanAccountSummaryFragment : ProgressableFragment(), LoanAccountSummaryMvp
         }
         tv_in_arrears!!.text = loanWithAssociations.summary.totalOverdue.toString()
         tv_principal!!.text = loanWithAssociations.summary
-                .principalDisbursed.toString()+ "GNF "
+                .principalDisbursed.toString("%,.2f") + "GNF "
         tv_loan_principal_due!!.text = loanWithAssociations.summary
-                .principalOutstanding.toString()+ "GNF "
+                .principalOutstanding.DecimalFormat("#,###.00") + "GNF "
         tv_loan_principal_paid!!.text = loanWithAssociations.summary
                 .principalPaid.toString()+ "GNF "
         tv_interest!!.text = loanWithAssociations.summary.interestCharged.toString()
