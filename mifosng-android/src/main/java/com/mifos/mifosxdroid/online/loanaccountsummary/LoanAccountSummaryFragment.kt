@@ -247,7 +247,7 @@ class LoanAccountSummaryFragment : ProgressableFragment(), LoanAccountSummaryMvp
         tv_loan_principal_due!!.text = loanWithAssociations.summary
                 .principalOutstanding.DecimalFormat("#,###.00") + "GNF "
         tv_loan_principal_paid!!.text = loanWithAssociations.summary
-                .principalPaid.toString()+ "GNF "
+                .principalPaid + "GNF "
         tv_interest!!.text = loanWithAssociations.summary.interestCharged.toString()
         tv_loan_interest_due!!.text = loanWithAssociations.summary
                 .interestOutstanding.toString()+ "GNF "
