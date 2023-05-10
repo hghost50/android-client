@@ -243,9 +243,9 @@ class LoanAccountSummaryFragment : ProgressableFragment(), LoanAccountSummaryMvp
         }
         tv_in_arrears!!.text = loanWithAssociations.summary.totalOverdue.toString()
         tv_principal!!.text = loanWithAssociations.summary
-                .principalDisbursed.toString("%,.2f") + "GNF "
+                .principalDisbursed.toString() + "GNF "
         tv_loan_principal_due!!.text = loanWithAssociations.summary
-                .principalOutstanding.DecimalFormat("#,###.00") + "GNF "
+                .principalOutstanding.DecimalFormat() + "GNF "
         tv_loan_principal_paid!!.text = loanWithAssociations.summary
                 .principalPaid + "GNF "
         tv_interest!!.text = loanWithAssociations.summary.interestCharged.toString()
