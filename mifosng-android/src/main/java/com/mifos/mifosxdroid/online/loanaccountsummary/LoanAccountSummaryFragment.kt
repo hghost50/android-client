@@ -234,7 +234,7 @@ class LoanAccountSummaryFragment : ProgressableFragment(), LoanAccountSummaryMvp
 
     fun inflateLoanSummary(loanWithAssociations: LoanWithAssociations) {
         tv_amount_disbursed!!.text = loanWithAssociations.summary
-                .principalDisbursed.format("%,d") + " GNF"
+                .principalDisbursed.toString() + " GNF"
         try {
             tv_disbursement_date!!.text = DateHelper.getDateAsString(loanWithAssociations
                     .timeline.actualDisbursementDate)
